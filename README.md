@@ -55,25 +55,63 @@ Claude：🎯 为你匹配到以下专家：
 
 ## 安装
 
-### 前提条件
-- [Claude Code](https://claude.ai/code) CLI 已安装
+### 支持平台
 
-### 方法一：手动安装
+| 平台 | 配置文件 | 调用方式 |
+|------|---------|---------|
+| **Claude Code** | `SKILL.md` | `/expert 需求描述` |
+| **OpenClaw** | `openclaw.skill.json` | `/expert 需求描述` |
+| **Codex** | `codex.yaml` | `codex run expert "需求描述"` |
+
+---
+
+### Claude Code 安装
 
 ```bash
-# 克隆到 Claude skills 目录
+# 方法一：克隆整个仓库
 git clone https://github.com/bruceluo123/expert-skill ~/.claude/skills/expert
-```
 
-### 方法二：直接复制 SKILL.md
-
-```bash
+# 方法二：只复制 SKILL.md
 mkdir -p ~/.claude/skills/expert
 curl -o ~/.claude/skills/expert/SKILL.md \
   https://raw.githubusercontent.com/bruceluo123/expert-skill/main/SKILL.md
 ```
 
 安装完成后，在 Claude Code 中输入 `/expert` 即可使用。
+
+---
+
+### OpenClaw 安装
+
+```bash
+# 克隆到 OpenClaw skills 目录
+git clone https://github.com/bruceluo123/expert-skill ~/.openclaw/skills/expert
+
+# 或者通过 ClawHub（如果已发布）
+/install bruceluo123/expert
+```
+
+OpenClaw 会自动读取 `openclaw.skill.json`，然后用 `/expert` 调用。
+
+---
+
+### Codex 安装
+
+```bash
+# 克隆到 Codex skills 目录
+git clone https://github.com/bruceluo123/expert-skill ~/.codex/skills/expert
+
+# 或者在项目内使用
+git clone https://github.com/bruceluo123/expert-skill .codex/skills/expert
+```
+
+安装后通过以下方式调用：
+
+```bash
+codex run expert "我想做小红书爆款内容"
+# 或者在 Codex 对话中
+/expert 我想做小红书爆款内容
+```
 
 ---
 

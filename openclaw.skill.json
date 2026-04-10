@@ -1,0 +1,18 @@
+{
+  "name": "expert",
+  "version": "1.0.0",
+  "description": "智能专家匹配系统——根据需求从271个专家中找到最合适的1-3位，引导细化需求，切换专家身份深度协作。",
+  "author": "bruceluo123",
+  "trigger": "/expert",
+  "prompt_file": "SKILL.md",
+  "tags": ["productivity", "agents", "chinese", "expert-routing"],
+  "platform": "openclaw",
+  "model": "auto",
+  "tools": [],
+  "examples": [
+    "/expert 我想做一个小红书爆款内容计划",
+    "/expert 帮我分析竞争对手定价策略",
+    "/expert 我需要设计一个高并发微服务架构",
+    "/expert 帮我写一篇去AI味的爆款文章"
+  ]
+}

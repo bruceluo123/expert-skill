@@ -1,0 +1,39 @@
+name: expert
+version: "1.0.0"
+description: >
+  智能专家匹配系统——根据需求从271个专家中找到最合适的1-3位，
+  引导细化需求后切换专家身份深度协作。
+author: bruceluo123
+platform: codex
+
+# 触发方式
+command: expert
+aliases:
+  - exp
+  - 专家
+
+# 入口提示词
+prompt_file: SKILL.md
+
+# Codex skill 配置
+skill:
+  type: conversational
+  model: auto
+  tools: []
+
+# 使用示例（codex run expert "需求描述"）
+examples:
+  - input: "我想做小红书爆款内容"
+    description: "营销场景——匹配小红书运营专家"
+  - input: "帮我做代码安全审查"
+    description: "技术场景——匹配安全审查员"
+  - input: "我的亚马逊Listing排名很低"
+    description: "电商场景——匹配亚马逊Listing专家"
+
+# 标签
+tags:
+  - productivity
+  - agents
+  - chinese
+  - expert-routing
+  - 271-experts
